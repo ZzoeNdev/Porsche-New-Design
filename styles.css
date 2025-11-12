@@ -1,0 +1,416 @@
+* {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    width: 96vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.menuImgIcon {
+    cursor: pointer;
+}
+
+/* ================================ MENU LATERAL ================================= */
+
+@keyframes menuTransitionIn {
+    0% {
+        left: -1100px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes menuTransitionOut {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -1100px;
+    }
+}
+
+/* Menu lateral */
+.menu-container {
+    display: none;
+}
+
+/* Classes para abrir o menu lateral */
+.openMenu {
+    animation: menuTransitionIn 0.5s ease-in-out;
+    display: flex;
+    z-index: 1000;
+    position: fixed;
+    justify-content: start;
+    flex-direction: column;
+    height: 100vh;
+    width: 1096px;
+    background-color: rgba(241, 241, 241, 1);
+    border-radius: 0px 24px 24px 0px;
+}
+
+/* Classes para fechar o menu lateral */
+.closeMenu {
+    animation: menuTransitionOut 0.5s ease-in-out;
+    display: flex;
+    z-index: 1000;
+    position: fixed;
+    justify-content: start;
+    flex-direction: column;
+    height: 100vh;
+    width: 1096px;
+    right: 100%;
+    background-color: rgba(241, 241, 241, 1);
+    border-radius: 0px 24px 24px 0px;
+}
+
+/* Menu header */
+.nav-menu {
+    z-index: 999;
+    display: flex;
+    justify-content: start;
+    padding: 30px;
+}
+
+/* Icone do menu */
+.menuImgIconBlack {
+    cursor: pointer;
+}
+
+/* Texto de boas vindas no menu */
+.menu-container>h1 {
+    margin-left: 5%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    font-size: 40px;
+    color: rgba(11, 11, 11, 1);
+    font-weight: 600;
+}
+
+/* Fundo do slider de carros */
+.backgroundSlider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    height: 240px;
+    width: 88%;
+    background-color: rgba(195, 195, 195, 1);
+    border-radius: 28px;
+    padding: 3px;
+}
+
+.selectedBakcground {
+    transition: 0.5s;
+    display: flex;
+    width: 330px;
+    height: 228px;
+    border-radius: 37px;
+    background-color: rgba(137, 137, 137, 0.267);
+}
+
+/* Botoes de controle do slider */
+#MinusSlider,
+#PlusSlider {
+    z-index: 1000;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 14px;
+    background-color: rgba(241, 241, 241, 1);
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+#MinusSlider:hover,
+#PlusSlider:hover {
+    background-color: rgb(19, 19, 19);
+    transition: 0.7s;
+}
+
+#MinusSlider {
+    top: 44.7%;
+    left: 6.5%;
+}
+
+#PlusSlider {
+    top: 44.7%;
+    left: 88.7%;
+}
+
+/* Div com todos os carros do slider */
+.car-slider {
+    position: absolute;
+    bottom: 52%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 95%;
+    overflow-x: hidden;
+}
+
+/* Classe para o carro selecionado no slider */
+.selectedCar {
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 330px;
+    height: 228px;
+}
+
+.logoCar {
+    opacity: 0;
+    position: relative;
+    bottom: 7%;
+    left: 38%;
+}
+
+/* Div que define o meio de todos os carros*/
+.combustive {
+    opacity: 0;
+    position: relative;
+    top: 4%;
+    left: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 20px;
+    background-color: rgba(43, 43, 43, 1);
+    border-radius: 4px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.buyVehicle {
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 222px;
+    height: 50px;
+    background-color: rgba(195, 195, 195, 1);
+    border: none;
+    border-radius: 9px;
+    margin-top: 15px;
+    margin-left: 73%;
+    cursor: pointer;
+}
+
+.buyVehicle:hover {
+    transition: 0.5s;
+    background-color: rgb(221, 221, 221);
+}
+
+.buyVehicle>img {
+    height: 14px;
+}
+
+.section-options {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    margin-left: 5%;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 395px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.option-item:hover {
+    transition: 0.5s;
+    background-color: rgb(221, 221, 221);
+}
+
+.option-item>p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.account {
+    margin-left: 16.8%;
+}
+
+.accountPfp {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ================================ PRIMEIRA SEÇÃO ================================= */
+
+/* Container principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(11, 11, 11, 1);
+}
+
+/* Luz de fundo (circular) */
+.lightCircle {
+    z-index: 1;
+    position: absolute;
+    width: 602px;
+    height: 602px;
+    border-radius: 100%;
+    background: #D7D3D3;
+    opacity: 7%;
+    box-shadow: 0px 0px 97.7px 87px #D7D3D3;
+}
+
+/* Texto a esquerda */
+.textMainLeft {
+    position: absolute;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    left: 2%;
+    top: 28%;
+    min-width: 490px;
+    max-width: 500px;
+}
+
+/* Botão Saiba Mais */
+.learnMoreMainButton {
+    transition: 0.3s;
+    width: 140px;
+    height: 55px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid rgba(45, 45, 45, 1);
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botão Saiba Mais - Hover */
+.learnMoreMainButton:hover {
+    background-color: rgba(45, 45, 45, 1);
+    transition: 0.3s;
+}
+
+/* Texto Macan Porsche */
+.carMainTextImage {
+    z-index: 1;
+    position: absolute;
+    top: 70%;
+}
+
+/* Texto a direita */
+.textMainRight {
+    position: absolute;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    right: 2%;
+    top: 51%;
+    min-width: 490px;
+    max-width: 500px;
+}
+
+/* Carro Macan Porsche */
+.carMainImage {
+    z-index: 999;
+    position: absolute;
+}
+
+/* Div da seta e também da estilização dela */
+.downMain {
+    transition: 1s;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 57px;
+    width: 57px;
+    border: 1px solid rgba(45, 45, 45, 1);
+    border-radius: 15px;
+    bottom: 20px;
+}
+
+/* Animação para a seta */
+@keyframes setDown {
+    0% {
+        top: -5px;
+    }
+
+    25% {
+        top: 5px;
+    }
+
+    50% {
+        top: -5px;
+    }
+
+    100% {
+        top: 5px;
+    }
+}
+
+/* Adicionando animação à seta */
+.downMain>img {
+    /* Coloquei position relative, pois no modo static a animação não funciona por conta de nao ter um referencia de posição definida como top, bottom, etc. */
+    position: relative;
+    animation: setDown 2s ease-in-out infinite alternate;
+}
+
+/* Classe para esconder a seta */
+.hidenDownMain {
+    transition: 1s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 57px;
+    width: 57px;
+    border: 1px solid rgba(45, 45, 45, 1);
+    border-radius: 15px;
+    bottom: 20px;
+}
+
+/* ================================ SEGUNDA SEÇÃO ================================= */
+
+.second-container {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
