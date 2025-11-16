@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body{
+    padding-bottom: 60px;
+}
+
 header {
     z-index: 999;
     position: absolute;
@@ -410,7 +414,62 @@ header {
 /* ================================ SEGUNDA SEÇÃO ================================= */
 
 .second-container {
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
     width: 100%;
-    background-color: white;
+    background-color: rgba(241, 241, 241, 1);
+    padding-top: 80px;
 }
+
+.mainBanner{
+    background-image: url("imgs/backgroundMainBanner.png");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 233px;
+    width: 1604px;
+    border-radius: 41px;
+}
+
+.mainBanner > img{
+    position: relative;
+    bottom: 30%;
+    left: 6%;
+}
+
+.mainBanner > p {
+    font-size: 48px;
+    color: rgba(241, 241, 241, 1);
+    max-width: 325px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.mainBanner > p > span{
+    font-style: italic;
+    text-shadow: inset 0 3px 3px black;
+}
+
+.infosMainBanner{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.infositem-charger{
+
+}
+
+.chargerBackground{
+    
+}
+
+.chargerOver{
+    position: absolute;
+    top: 137%;
+}
+
