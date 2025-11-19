@@ -9,6 +9,7 @@
 </div>
 
 <h1>Overview:</h1>
+<h6>Home and Menu pages</h6>
 <div style="display:flex;">
   <img src="imgs/exampleGIF/gifHome.gif" alt="" height="250px">
   <img src="imgs/exampleGIF/gifHomeSmartPhone.gif" alt="" height="250px">
