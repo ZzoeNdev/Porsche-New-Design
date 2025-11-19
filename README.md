@@ -10,7 +10,17 @@
 
 <h1>Overview:</h1>
 <h6>Home and Menu pages</h6>
-<div style="display:flex;">
-  <img src="imgs/exampleGIF/gifHome.gif" alt="" height="250px">
-  <img src="imgs/exampleGIF/gifHomeSmartPhone.gif" alt="" height="250px">
+
+<div style="display:flex;>
+  
+  <div>
+    <h6>PC:</h6>
+    <img src="imgs/exampleGIF/gifHome.gif" alt="" height="250px">
+  </div>
+
+  <div>
+    <h6>Smartphone:</h6>
+    <img src="imgs/exampleGIF/gifHomeSmartPhone.gif" alt="" height="250px">
+  </div>
+  
 </div>
