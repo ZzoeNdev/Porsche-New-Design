@@ -1,6 +1,6 @@
-<h1><b>NOT A OFFICIAL PORSCHE WEBSITE</b></h1>
+<h1><b>NOT AN OFFICIAL PORSCHE WEBSITE</b></h1>
 <h5>This website is created for <b>personal use</b> and <b>demonstrate the new desing</b></h5>
-<h4> Desenvolved by ZzoeNdev</h4>
+<h4> Developed by ZzoeNdev</h4>
 
 <h1>Languages:</h1>
 <div style="display:flex;">
