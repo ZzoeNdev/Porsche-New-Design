@@ -62,8 +62,7 @@ header {
     left: 0;
     justify-content: start;
     flex-direction: column;
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
     width: 1096px;
     background-color: rgba(241, 241, 241, 1);
     border-radius: 0px 24px 24px 0px;
@@ -160,6 +159,10 @@ header {
 
 #PlusSlider {
     left: 88.7%;
+}
+
+.modelsMenu{
+    display: none;
 }
 
 /* Div com todos os carros do slider */
@@ -499,6 +502,122 @@ header {
 
     header > img {
         height: 1.5vh;
+    }
+
+    .nav-menu{
+        padding: 30px 0 30px 0;
+    }
+
+    .menu-container{
+        padding-left: 4%;
+    }
+
+    .menu-container>h1 {
+        margin-left: 0;
+        font-size: 25px;
+    }
+
+    .menuImgIconBlack {
+        height: 20px;
+    }
+
+    .openMenu{
+        width: 90%;
+    }
+
+    .closeMenu{
+        width: 90%;
+    }
+
+    .backgroundSlider{
+        display: none;
+    }
+
+    .selectedBakcground{
+        display: none;
+    }
+
+    .car-slider{
+        display: none;
+    }
+
+    #MinusSlider,
+    #PlusSlider{
+        display: none;
+    }
+
+    .buyVehicle{
+        display: none;
+    }
+
+    .options-container{
+        margin-top: 25px;
+        gap: 2px;
+    }
+
+    .modelsMenu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20%;
+        padding: 10px;
+        height: 15%;
+        width: 90%;
+        background-color: rgba(195, 195, 195, 1);
+        border-radius: 10px;
+        margin-top: 35px;
+    }
+
+    .modelsMenu > button{
+        width: 70%;
+        height: 30%;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(241, 241, 241, 1);
+    }
+
+    .carModels{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .carModels > img{
+        height: 7.8vw;
+    }
+
+
+    .section-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-left: 0;
+    }
+
+    .option-item {
+        width: 275px;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .option-item>p {
+        font-size: 15px;
+    }
+
+    .account{
+        margin-left: 0;
+        margin-top: 70px;
+    }
+
+    .accountPfp > img{
+        height: 20px;
+    }
+
+    .accountPfp > p {
+        font-size: 15px;
     }
 
     /* Personalização responsiva do main */

@@ -21,6 +21,19 @@ document.addEventListener('scroll', function () {
 
 });
 
+// Ajuste de opacidade nos modelos de carro no menu de smartphone
+
+const carModel = document.querySelectorAll(".carModel")
+
+carModel[0].style.opacity = 0.3;
+carModel[2].style.opacity = 0.3;
+
+const optionItem = document.querySelectorAll(".option-item")
+
+if (window.screen.width <= 500) {
+    optionItem[0].style.display = "none";
+}
+
 // Menu lateral aparecer/desaparecer
 
 const menuButton = document.getElementById('mainMenu');
