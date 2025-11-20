@@ -67,13 +67,13 @@ let CarsItems = document.querySelectorAll('.car-item');
 const logoCar = document.getElementsByClassName('logoCar');
 
 // Tipo de abastecimento do carro que aparece embaixo
-const combustive = document.getElementsByClassName('combustive');
+const fuel = document.getElementsByClassName('fuel');
 
 // Fundo maior do slider (Fundo menor esta dentro dessa div)
 const backgroundSlider = document.getElementById('backgroundSlider');
 
 // Fundo menor do slider, que destaca o carro selecionado
-const selectedBackground = document.getElementsByClassName("selectedBakcground");
+const selectedBackground = document.getElementsByClassName("selectedBackground");
 
 // Variável que armazena a quantidade de itens (carros)
 let CarsItemsLength = CarsItems.length;
@@ -83,7 +83,7 @@ let selectedCar = 1;
 
 // Deixando visivel a logo e o abastecimento do carro que já aparece de ante-mão
 logoCar[selectedCar].style.opacity = 1;
-combustive[selectedCar].style.opacity = 1;
+fuel[selectedCar].style.opacity = 1;
 
 // Mostra informações no console para dúvidas
 console.log(CarsItemsLength);
@@ -93,19 +93,20 @@ console.log(selectedCar);
 // Função para passar o slider para trás
 
 // Espera um clique no no botão de menos para executar a função
-minusButton.addEventListener("click", function () {
+
+function flowSlider(a){
 
     // Verifica se o carro selecionado no momento com o numero de array (selectedCar) tem a classe .selectedCar
     if (CarsItems[selectedCar].classList.contains('selectedCar')) {
 
         // Se tiver, esconde a logo e o abastecimento
         logoCar[selectedCar].style.opacity = 0;
-        combustive[selectedCar].style.opacity = 0;
+        fuel[selectedCar].style.opacity = 0;
         // E remove a class .selectedCar, fazendo que ele não fique mais no foco
         CarsItems[selectedCar].classList.remove('selectedCar');
 
-        // Pegamos e tiramos 1 do selectedCar para ele ir para o array anterior, fazendo que ele vá para tras
-        selectedCar -= 1;
+        // Pegamos e tiramos 1 ou colocamos 1 no selectedCar para ele ir para o array anterior ou posterior, fazendo que ele vá para trás ou para frente
+        selectedCar += a;
 
         // Verfica se o carro selecionado for menor que o tamanho do array (o que causaria um erro por procurar um carro que não existe)
         // ele vai para o ultimo elemento do array
@@ -114,6 +115,12 @@ minusButton.addEventListener("click", function () {
             // Colocamos - 1, pois um array vai de 0 à 5 por exemplo, o que seria 6 unidades (interprete 0 como 1 e 5 como 6)
             // e a var CarsItemsLength nos retorna por exemplo o numero 6, pois ele conta a quantidade de itens e não interpreta como array
             selectedCar = CarsItemsLength - 1;
+        }
+
+        // Verfica se o carro selecionado for maior que o tamanho do array (o que causaria um erro por procurar um carro que não existe)
+        // ele vai para o primeiro elemento do array
+        if (selectedCar > CarsItemsLength - 1) {
+            selectedCar = 0;
         }
 
         // Passando pela verificação, nós iremos pegar o carro selecionado com o numero de array do selectedCar já subtraido
@@ -131,7 +138,7 @@ minusButton.addEventListener("click", function () {
 
         // Aqui deixamos a logo e o abastecimento do carro novo visiviel
         logoCar[selectedCar].style.opacity = 1;
-        combustive[selectedCar].style.opacity = 1;
+        fuel[selectedCar].style.opacity = 1;
 
     // Caso a gente clique e não exista um carro com a class .selectedCar colocaremos no array que esta com o numero do selectedCar
     // Apenas parar evitar erros
@@ -156,54 +163,14 @@ minusButton.addEventListener("click", function () {
 
     // Mostra informações no console para dúvidas
     console.log(selectedCar);
+};
+
+// Execução das funçoes
+
+minusButton.addEventListener("click", function(){
+    flowSlider(-1);
 });
 
-// Mesma coisa do botão de menos (seguir as mesmas instruções, porém o selectedCar agora será somado)
-plusButton.addEventListener("click", function () {
-
-    if (CarsItems[selectedCar].classList.contains('selectedCar')) {
-        CarsItems[selectedCar].classList.remove('selectedCar');
-        logoCar[selectedCar].style.opacity = 0;
-        combustive[selectedCar].style.opacity = 0;
-
-        selectedCar += 1;
-        if (selectedCar > CarsItemsLength - 1) {
-            selectedCar = 0;
-        }
-
-        logoCar[selectedCar].style.opacity = 1;
-        combustive[selectedCar].style.opacity = 1;
-
-        CarsItems[selectedCar].classList.add('selectedCar');
-        CarsItems[selectedCar].scrollIntoView({
-            behavior: 'smooth',
-            inline: 'center'
-        });
-
-    } else {
-        CarsItems[selectedCar].classList.add('selectedCar');
-        logoCar[selectedCar].style.opacity = 1;
-        combustive[selectedCar].style.opacity = 1;
-    }
-
-    if (selectedCar == CarsItemsLength - 1) {
-        backgroundSlider.style.justifyContent = "end";
-    } else if (selectedCar == 0) {
-        backgroundSlider.style.justifyContent = "start";
-    } else {
-        backgroundSlider.style.justifyContent = "center";
-    }
-
-
-    console.log(selectedCar);
+plusButton.addEventListener("click", function(){
+    flowSlider(1);
 });
-
-document.addEventListener("scroll", function () {
-    let descida = window.scrollY;
-
-    if (descida > 100) {
-        console.log(2 + 2);
-    }
-});
-
-
