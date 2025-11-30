@@ -68,7 +68,7 @@ header {
     border-radius: 0px 24px 24px 0px;
 }
 
-/* Classes para fechar o menu lateral */
+/* Classe para fechar o menu lateral */
 .closeMenu {
     animation: menuTransitionOut 0.5s ease-in-out;
     display: flex;
@@ -189,7 +189,7 @@ header {
 }
 
 .logoCar {
-    opacity: 1;
+    opacity: 0;
     position: relative;
     bottom: 7%;
     left: 38%;
@@ -197,7 +197,7 @@ header {
 
 /* Div que define o meio de todos os carros*/
 .fuel {
-    opacity: 1;
+    opacity: 0;
     position: relative;
     top: 4%;
     left: 38%;
@@ -423,14 +423,14 @@ header {
 /* ================================ SEGUNDA SEÇÃO ================================= */
 
 .second-container {
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: auto;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(241, 241, 241, 1);
-    padding-top: 80px;
+    padding-top: 4.7%;
 }
 
 .mainBanner{
@@ -439,21 +439,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 230px;
+    align-content: center;
+    height: 24%;
     width: 85%;
     border-radius: 41px;
 }
 
 .mainBanner > img{
     position: relative;
-    bottom: 30%;
     left: 6%;
+    height: auto;
+    width: 45%;
 }
 
 .mainBanner > p {
-    font-size: 48px;
+    font-size: 4vh;
     color: rgba(241, 241, 241, 1);
-    max-width: 325px;
+    width: 250px;
     font-weight: 600;
     margin-left: 50px;
 }
@@ -464,23 +466,120 @@ header {
 }
 
 .infosMainBanner{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(3,1fr);
     align-items: end;
+    align-self: start;
+    margin-top: 2.5%;
+    margin-left: 7.5%;
+    height: 240px;
+}
+
+.infositem-charger,
+.infositem-cayenne,
+.infositem-new911{
+    cursor: pointer;
 }
 
 .infositem-charger{
-
+    width: 13.8vw;
 }
 
 .chargerBackground{
-    
+    transition: 0.5s;
+    behavior: smooth;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: bottom;
 }
 
 .chargerOver{
     position: absolute;
-    top: 137%;
+    right: 77vw;
+    left: 7vw;
 }
+
+.chargerBackground:hover{
+    transition: 0.5s;
+    behavior: smooth;
+    height: 190px;
+}
+
+.infositem-new911{
+    width: 13.8vw;
+}
+
+.new911Background{
+    transition: 0.5s;
+    behavior: smooth;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.new911Over{
+    z-index: 1;
+    position: absolute;
+    top: 137.9%;
+    left: 22.5%;
+}
+
+.new911Background:hover{
+    transition: 0.5s;
+    behavior: smooth;
+    height: 190px;
+}
+
+.infositem-cayenne{
+    width: 13.8vw;
+}
+
+.cayenneBackground{
+    transition: 0.5s;
+    behavior: smooth;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.cayenneOver{
+    position: absolute;
+    top: 137.9%;
+    left: 36.5%;
+}
+
+.cayenneBackground:hover{
+    transition: 0.5s;
+    behavior: smooth;
+    height: 190px;
+}
+
+.direction-link{
+    display: flex;
+    justify-content: space-between;
+}
+
+.textLearnMore{
+    font-size: 32px;
+    color: rgba(11, 11, 11, 1);
+    font-weight: 400;
+    font-style: italic;
+    width: 55vw;
+
+    margin-right: 31vw;
+    padding: 60px;
+}
+
 
 /* ================================ PARTE RESPONSIVA ================================= */
 
