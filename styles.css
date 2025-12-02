@@ -702,6 +702,10 @@ header {
     min-width: 350px;
 }
 
+.fixCarFront718 {
+    margin-bottom: -42.3%;
+}
+
 .infoCar-background{
     z-index: 1;
     width: 90%;
