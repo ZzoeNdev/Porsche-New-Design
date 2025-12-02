@@ -182,16 +182,21 @@ const sliderInfoL = document.getElementById('sliderInfoL');
 const sliderInfoR = document.getElementById('sliderInfoR');
 let infoCars = document.querySelectorAll('.infoCar-item');
 let infoCarsLength = infoCars.length;
-let selectedInfoCar = 0;
+let optionsInfoCars = document.querySelectorAll('.optionInfo-item');
+
+let selectedInfoCar = 1;
 
 console.log(infoCarsLength);
 
-infoCars[0].classList.add('selectedCarInfo');
+infoCars[1].classList.add('selectedCarInfo');
+infoCars[1].scrollIntoView();
+optionsInfoCars[1].classList.add('selectedOptionInfo');
 
 function flowSliderInfo(b){
 
     if(infoCars[selectedInfoCar].classList.contains('selectedCarInfo')){
         infoCars[selectedInfoCar].classList.remove('selectedCarInfo');
+        optionsInfoCars[selectedInfoCar].classList.remove('selectedOptionInfo');
 
         selectedInfoCar += b;
 
@@ -202,6 +207,11 @@ function flowSliderInfo(b){
         if (selectedInfoCar > infoCarsLength - 1){
             selectedInfoCar = 0;
         }
+
+        optionsInfoCars[selectedInfoCar].classList.add('selectedOptionInfo');
+        optionsInfoCars[selectedInfoCar].scrollIntoView({
+            behavior: "smooth",
+        })
 
         infoCars[selectedInfoCar].classList.add('selectedCarInfo');
         infoCars[selectedInfoCar].scrollIntoView({

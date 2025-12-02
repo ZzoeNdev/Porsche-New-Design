@@ -611,10 +611,54 @@ header {
 .selectInfo-slider{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--third-color);
     height: 60px;
     width: 95%;
     border-radius: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#sliderInfoR,
+#sliderInfoL{
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#sliderInfoR:hover,
+#sliderInfoL:hover{
+    transition: 0.5s;
+    transform: scale(125%);
+}
+
+#sliderInfoL > img{
+    transition: 0.5s;
+    transform: rotate(180deg);
+}
+
+.optionInfo-item{
+    transition: 0.5s;
+    fill: var(--main-color);
+    opacity: 0.3;
+    height: 30%;
+    width: auto;
+}
+
+.selectedOptionInfo{
+    transition: 0.5s;
+    background-color: var(--main-color);
+    padding: 0.9%;
+    border-radius: 13px;
+    fill: var(--secundary-color);
+    opacity: 1;
+    height: 40%;
+    width: auto;
 }
 
 .infoCar{
@@ -677,6 +721,7 @@ header {
 }
 
 .playButton{
+    opacity: 0.3;
     z-index: 3;
     transition: 0.3s;
     display: flex;
@@ -755,10 +800,6 @@ header {
 
 .selectedCarInfo{
     display: flex;
-}
-
-#vector911{
-    fill: var(--main-color);
 }
 
 
