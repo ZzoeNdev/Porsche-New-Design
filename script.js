@@ -174,3 +174,47 @@ minusButton.addEventListener("click", function(){
 plusButton.addEventListener("click", function(){
     flowSlider(1);
 });
+
+
+// Slider de informações do carro
+
+const sliderInfoL = document.getElementById('sliderInfoL');
+const sliderInfoR = document.getElementById('sliderInfoR');
+let infoCars = document.querySelectorAll('.infoCar-item');
+let infoCarsLength = infoCars.length;
+let selectedInfoCar = 0;
+
+console.log(infoCarsLength);
+
+infoCars[0].classList.add('selectedCarInfo');
+
+function flowSliderInfo(b){
+
+    if(infoCars[selectedInfoCar].classList.contains('selectedCarInfo')){
+        infoCars[selectedInfoCar].classList.remove('selectedCarInfo');
+
+        selectedInfoCar += b;
+
+        if (selectedInfoCar < 0){
+            selectedInfoCar = infoCarsLength - 1;
+        }
+
+        if (selectedInfoCar > infoCarsLength - 1){
+            selectedInfoCar = 0;
+        }
+
+        infoCars[selectedInfoCar].classList.add('selectedCarInfo');
+        infoCars[selectedInfoCar].scrollIntoView({
+            behavior: "smooth",
+        })
+    }
+
+}
+
+sliderInfoL.addEventListener('click', function(){
+    flowSliderInfo(-1);
+});
+
+sliderInfoR.addEventListener('click', function(){
+    flowSliderInfo(1);
+});
