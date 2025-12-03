@@ -11,7 +11,7 @@
     padding: 0;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,7 +168,7 @@ header {
     left: 88.7%;
 }
 
-.modelsMenu{
+.modelsMenu {
     display: none;
 }
 
@@ -440,7 +440,7 @@ header {
     padding-top: 4.7%;
 }
 
-.mainBanner{
+.mainBanner {
     background-image: url("imgs/backgroundMainBanner.png");
     background-repeat: no-repeat;
     display: flex;
@@ -452,14 +452,14 @@ header {
     border-radius: 41px;
 }
 
-.mainBanner > img{
+.mainBanner>img {
     position: relative;
     left: 6%;
     height: auto;
     width: 45%;
 }
 
-.mainBanner > p {
+.mainBanner>p {
     font-size: 4vh;
     color: var(--secundary-color);
     width: 250px;
@@ -467,41 +467,37 @@ header {
     margin-left: 50px;
 }
 
-.mainBanner > p > span{
+.mainBanner>p>span {
     font-style: italic;
     text-shadow: inset 0 3px 3px black;
 }
 
-.infosMainBanner{
+.infosMainBanner {
     display: grid;
     gap: 5%;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: end;
     align-self: start;
-    margin-top: 2.5%;
     margin-left: 7.5%;
-    height: 240px;
+    height: 280px;
 }
 
 .infositem-charger,
 .infositem-cayenne,
-.infositem-new911{
+.infositem-new911 {
     cursor: pointer;
 }
 
-.infositem-charger{
-    width: 13.8vw;
-    min-width: 156px;
-}
-
-.infositem-imgs{
+.infositem-charger {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 13.8vw;
+    min-width: 156px;
 }
 
-.chargerBackground{
+.chargerBackground {
     transition: 0.5s;
     behavior: smooth;
     z-index: 1;
@@ -512,82 +508,98 @@ header {
     object-position: bottom;
 }
 
-.chargerOver{
+.chargerOver {
     z-index: 2;
-    width: 15%;
+    position: relative;
+    width: 100%;
+    min-width: 135px;
+    height: auto;
+    margin-top: -75%;
+    pointer-events: none;
+}
+
+.chargerBackground:hover {
+    transition: 0.5s;
+    height: 20vh;
+}
+
+.infositem-new911 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 13.8vw;
+    min-width: 156px;
+}
+
+.new911Background {
+    transition: 0.5s;
+    behavior: smooth;
+    z-index: 1;
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.new911Over {
+    z-index: 2;
+    margin-top: -75%;
+    width: 100%;
     min-width: 135px;
     height: auto;
     pointer-events: none;
 }
 
-.chargerBackground:hover{
+.new911Background:hover {
     transition: 0.5s;
-    height: 15vh;
+    behavior: smooth;
+    height: 190px;
 }
 
-.infositem-new911{
+.infositem-cayenne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 13.8vw;
     min-width: 156px;
 }
 
-.new911Background{
+.cayenneBackground {
     transition: 0.5s;
     behavior: smooth;
     z-index: 1;
-    height: 80px;
+    height: 90px;
     width: 100%;
     border-radius: 5px;
     object-fit: cover;
     object-position: bottom;
 }
 
-.new911Over{
-    z-index: 1;
-    position: absolute;
-    top: 137.9%;
-    left: 22.5%;
-}
-
-.new911Background:hover{
-    transition: 0.5s;
-    behavior: smooth;
-    height: 190px;
-}
-
-.infositem-cayenne{
-    width: 13.8vw;
-    min-width: 156px;
-}
-
-.cayenneBackground{
-    transition: 0.5s;
-    behavior: smooth;
-    z-index: 1;
-    height: 80px;
+.cayenneOver {
+    z-index: 2;
+    margin-top: -75%;
     width: 100%;
-    border-radius: 5px;
-    object-fit: cover;
-    object-position: bottom;
+    height: auto;
+    pointer-events: none;
 }
 
-.cayenneOver{
-    position: absolute;
-    top: 137.9%;
-    left: 36.5%;
-}
-
-.cayenneBackground:hover{
+.cayenneBackground:hover {
     transition: 0.5s;
     behavior: smooth;
     height: 190px;
 }
 
-.direction-link{
+.direction-link {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    padding: 4%;
 }
 
-.textLearnMore{
+.textLearnMore {
     font-size: 32px;
     color: var(--main-color);
     font-weight: 400;
@@ -599,7 +611,7 @@ header {
 
 /* slider de informações dos carros */
 
-.infoCar-sliders{
+.infoCar-sliders {
     display: grid;
     justify-items: center;
     align-self: center;
@@ -608,7 +620,7 @@ header {
     width: 90vw;
 }
 
-.selectInfo-slider{
+.selectInfo-slider {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -621,7 +633,7 @@ header {
 }
 
 #sliderInfoR,
-#sliderInfoL{
+#sliderInfoL {
     transition: 0.5s;
     display: flex;
     justify-content: center;
@@ -632,17 +644,17 @@ header {
 }
 
 #sliderInfoR:hover,
-#sliderInfoL:hover{
+#sliderInfoL:hover {
     transition: 0.5s;
     transform: scale(125%);
 }
 
-#sliderInfoL > img{
+#sliderInfoL>img {
     transition: 0.5s;
     transform: rotate(180deg);
 }
 
-.optionInfo-item{
+.optionInfo-item {
     transition: 0.5s;
     fill: var(--main-color);
     opacity: 0.3;
@@ -650,7 +662,7 @@ header {
     width: auto;
 }
 
-.selectedOptionInfo{
+.selectedOptionInfo {
     transition: 0.5s;
     background-color: var(--main-color);
     padding: 0.9%;
@@ -661,7 +673,7 @@ header {
     width: auto;
 }
 
-.infoCar{
+.infoCar {
     background-color: var(--third-color);
     height: 625px;
     width: 100%;
@@ -669,7 +681,7 @@ header {
     overflow: hidden;
 }
 
-.sliderInfo-container{
+.sliderInfo-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -677,7 +689,7 @@ header {
     width: 300%;
 }
 
-.infoCar-item{
+.infoCar-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -686,7 +698,7 @@ header {
     width: 100%;
 }
 
-.demonstrateCar{
+.demonstrateCar {
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -694,7 +706,7 @@ header {
     width: 50%;
 }
 
-.infoCar-carFront{
+.infoCar-carFront {
     z-index: 2;
     margin-bottom: -40.3%;
     width: 100%;
@@ -706,7 +718,7 @@ header {
     margin-bottom: -42.3%;
 }
 
-.infoCar-background{
+.infoCar-background {
     z-index: 1;
     width: 90%;
     height: 26.5vh;
@@ -716,7 +728,7 @@ header {
     border-radius: 15px;
 }
 
-.buttons-demonstrate{
+.buttons-demonstrate {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -724,7 +736,7 @@ header {
     margin-top: 3vh;
 }
 
-.playButton{
+.playButton {
     opacity: 0.3;
     z-index: 3;
     transition: 0.3s;
@@ -741,7 +753,7 @@ header {
     cursor: pointer;
 }
 
-.fuelInfo{
+.fuelInfo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -754,7 +766,7 @@ header {
     font-weight: 400;
 }
 
-.aboutInfoCar{
+.aboutInfoCar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -764,17 +776,17 @@ header {
     margin-right: 3%;
 }
 
-.aboutInfoCar > img{
+.aboutInfoCar>img {
     width: 4vw;
     min-width: 50px;
     height: auto;
 }
 
-.aboutInfoCar > p{
+.aboutInfoCar>p {
     text-align: right;
 }
 
-.aboutInfoCar > button{
+.aboutInfoCar>button {
     transition: 0.3s;
     width: 140px;
     height: 55px;
@@ -785,27 +797,100 @@ header {
     cursor: pointer;
 }
 
-.aboutInfoCar > button:hover{
+.aboutInfoCar>button:hover {
     background-color: var(--main-color);
     color: var(--secundary-color);
 }
 
-.textInfo-slider{
+.textInfo-slider {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    height: 70px;
+    height: 80%;
     width: 95%;
     border-radius: 16px;
     color: var(--secundary-color);
-    padding: 10px;
+    padding: 15px;
 }
 
-.selectedCarInfo{
+.selectedCarInfo {
     display: flex;
 }
 
+.findYourPorsche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    gap: 20px;
+}
+
+.imgFindPorsche{
+    width: 95vw;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1vw;
+}
+
+.textFindPorsche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleFindPorsche{
+    font-size: 4vh;
+    color: var(--main-color);
+    font-weight: 400;
+    text-align: center;
+}
+
+.titleFindPorsche > b{
+    font-style: italic;
+}
+
+.subtitleFindPorsche{
+    font-size: 1.8vh;
+    color: rgb(95, 95, 95);
+    font-weight: 400;
+    max-width: 70vw;
+    text-align: center;
+}
+
+.searchCity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.findPorscheInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 3.2vh;
+    font-size: medium;
+    font-weight: 400;
+    background-color: var(--secundary-color);
+    border: 1px solid var(--main-color);
+    border-radius: 0.5vw;
+    padding: 1%;
+}
+
+.searchCityButton{
+    position: absolute;
+    left: 72.5vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 /* ================================ PARTE RESPONSIVA ================================= */
 
@@ -821,15 +906,15 @@ header {
         padding: 30px;
     }
 
-    header > img {
+    header>img {
         height: 1.5vh;
     }
 
-    .nav-menu{
+    .nav-menu {
         padding: 30px 0 30px 0;
     }
 
-    .menu-container{
+    .menu-container {
         padding-left: 4%;
     }
 
@@ -842,41 +927,41 @@ header {
         height: 20px;
     }
 
-    .openMenu{
+    .openMenu {
         width: 90%;
     }
 
-    .closeMenu{
+    .closeMenu {
         width: 90%;
     }
 
-    .backgroundSlider{
+    .backgroundSlider {
         display: none;
     }
 
-    .selectedBackground{
+    .selectedBackground {
         display: none;
     }
 
-    .car-slider{
+    .car-slider {
         display: none;
     }
 
     #MinusSlider,
-    #PlusSlider{
+    #PlusSlider {
         display: none;
     }
 
-    .buyVehicle{
+    .buyVehicle {
         display: none;
     }
 
-    .options-container{
+    .options-container {
         margin-top: 25px;
         gap: 2px;
     }
 
-    .modelsMenu{
+    .modelsMenu {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -890,7 +975,7 @@ header {
         margin-top: 35px;
     }
 
-    .modelsMenu > button{
+    .modelsMenu>button {
         width: 70%;
         height: 30%;
         border: none;
@@ -898,14 +983,14 @@ header {
         background-color: var(--secundary-color);
     }
 
-    .carModels{
+    .carModels {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
     }
 
-    .carModels > img{
+    .carModels>img {
         height: 7.8vw;
     }
 
@@ -928,45 +1013,45 @@ header {
         font-size: 15px;
     }
 
-    .account{
+    .account {
         margin-left: 0;
         margin-top: 70px;
     }
 
-    .accountPfp > img{
+    .accountPfp>img {
         height: 20px;
     }
 
-    .accountPfp > p {
+    .accountPfp>p {
         font-size: 15px;
     }
 
     /* Personalização responsiva do main */
-    .main-container{
+    .main-container {
         flex-direction: column;
         height: 100vh;
     }
 
-    .lightCircle{
+    .lightCircle {
         height: 300px;
         width: 300px;
     }
 
-    .textMainLeft{
+    .textMainLeft {
         display: none;
     }
 
-    .learnMoreMainButton{
+    .learnMoreMainButton {
         display: none;
     }
 
-    .carMainTextImage{
-       height: 5.5%; 
-       width: auto;
-       top: 58vh;
+    .carMainTextImage {
+        height: 5.5%;
+        width: auto;
+        top: 58vh;
     }
 
-    .textMainRight{
+    .textMainRight {
         font-size: 6px;
         min-width: 83.3%;
         max-width: 83.3%;
@@ -981,16 +1066,13 @@ header {
     }
 
 
-    .downMain{
+    .downMain {
         top: 85%;
     }
 
-    .hidenDownMain{
+    .hidenDownMain {
         top: 85%;
     }
 
-    .second-container{
-        
-    }
+    .second-container {}
 }
-    

@@ -176,6 +176,8 @@ plusButton.addEventListener("click", function(){
 });
 
 
+
+
 // Slider de informações do carro
 
 const sliderInfoL = document.getElementById('sliderInfoL');
@@ -209,13 +211,12 @@ function flowSliderInfo(b){
         }
 
         optionsInfoCars[selectedInfoCar].classList.add('selectedOptionInfo');
-        optionsInfoCars[selectedInfoCar].scrollIntoView({
-            behavior: "smooth",
-        })
 
         infoCars[selectedInfoCar].classList.add('selectedCarInfo');
         infoCars[selectedInfoCar].scrollIntoView({
             behavior: "smooth",
+            block: "nearest",
+            inline: "center",
         })
     }
 
