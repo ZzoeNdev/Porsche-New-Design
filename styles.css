@@ -1074,5 +1074,7 @@ header {
         top: 85%;
     }
 
-    .second-container {}
+    .second-container {
+        display: none;
+    }
 }

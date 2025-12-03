@@ -90,8 +90,6 @@ console.log(CarsItemsLength);
 console.log(selectedCar);
 
 
-// Função para passar o slider para trás
-
 // Espera um clique no no botão de menos para executar a função
 
 function flowSlider(a){
@@ -179,6 +177,8 @@ plusButton.addEventListener("click", function(){
 
 
 // Slider de informações do carro
+
+// Mesma lógica do outro slider
 
 const sliderInfoL = document.getElementById('sliderInfoL');
 const sliderInfoR = document.getElementById('sliderInfoR');
