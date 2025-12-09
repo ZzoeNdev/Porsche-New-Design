@@ -18,3 +18,11 @@
   <img src="imgs/exampleGIF/gifHomeSmartPhone.gif" alt="" height="250px">
   
 </div>
+
+<h6> Main page</h6>
+
+<div style="display:flex;">
+  
+  <img src="imgs/exampleGIF/gifMainPorsche.gif" alt="" height="250px">
+  
+</div>
