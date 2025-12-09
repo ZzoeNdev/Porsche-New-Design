@@ -121,10 +121,12 @@
         </button>
 
         <!-- Botão para comprar um carro -->
-        <button class="buyVehicle">
-            <p>Adquirir um Veículo</p>
-            <img src="imgs/arrowOptions.png" alt="Comprar um veículo">
-        </button>
+        <div class="buyVehicle-container">
+            <button class="buyVehicle">
+                <p>Adquirir um Veículo</p>
+                <img src="imgs/arrowOptions.png" alt="Comprar um veículo">
+            </button>
+        </div>
 
         <!-- Seção onde terá as opções de escolha para o usuário -->
         <div class="section-options">
@@ -166,7 +168,7 @@
 
     <main>
         <!-- Seção principal -->
-        <section class="primary-section">
+        <section class="primary-section" id="primary-section">
 
             <div class="main-container">
 
@@ -388,17 +390,52 @@
 
                 <div class="textFindPorsche">
                     <h1 class="titleFindPorsche">Tem um <b>Porsche</b> esperando por você.</h1>
-                    <p class="subtitleFindPorsche">Insira sua localização e ache a Porsche disponível mais perto de você.</p>
+                    <p class="subtitleFindPorsche">Insira sua localização e ache a Porsche disponível mais perto de
+                        você.</p>
 
                     <div class="searchCity">
-                        <input class="findPorscheInput" type="text" placeholder="Insira sua localização aqui">
+                        <input class="findPorscheInput" type="text" placeholder="Insira sua localização aqui...">
                         <button class="searchCityButton"><img src="imgs/searchIcon.svg" alt="Search Icon"></button>
                     </div>
-                    
+
                 </div>
 
             </div>
 
+            <div class="news-container">
+                <h1>Novidades</h1>
+
+                <div class="imgsNews">
+                    <img class="backgroundNews" src="imgs/backgroundNews.png" alt="">
+                    <img class="frontCarNews" src="imgs/frontCarNews.png" alt="">
+                </div>
+
+                <div class="featuredNews">
+
+                    <div class="featuredNewsLSide">
+                        <div class="featuredNews-item">
+                            <p>E-Performace</p>
+                            <img src="imgs/arrowOptions.png" alt="">
+                        </div>
+                        <div class="featuredNews-item">
+                            <p>Tequipment Sound & Design  </p>
+                            <img src="imgs/arrowOptions.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="featuredNewsRSide">
+                        <div class="featuredNews-item">
+                            <p>Porsche Finder</p>
+                            <img src="imgs/arrowOptions.png" alt="">
+                        </div>
+                        <div class="featuredNews-item">
+                            <p>Aconselhamento e Compra</p>
+                            <img src="imgs/arrowOptions.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </section>
     </main>

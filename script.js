@@ -180,6 +180,7 @@ plusButton.addEventListener("click", function(){
 
 // Mesma lógica do outro slider
 
+const mainSection = document.getElementById('primary-section');
 const sliderInfoL = document.getElementById('sliderInfoL');
 const sliderInfoR = document.getElementById('sliderInfoR');
 let infoCars = document.querySelectorAll('.infoCar-item');
@@ -192,6 +193,7 @@ console.log(infoCarsLength);
 
 infoCars[1].classList.add('selectedCarInfo');
 infoCars[1].scrollIntoView();
+mainSection.scrollIntoView();
 optionsInfoCars[1].classList.add('selectedOptionInfo');
 
 function flowSliderInfo(b){
@@ -229,3 +231,4 @@ sliderInfoL.addEventListener('click', function(){
 sliderInfoR.addEventListener('click', function(){
     flowSliderInfo(1);
 });
+
