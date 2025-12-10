@@ -19,10 +19,18 @@
   
 </div>
 
-<h6> Main page</h6>
+<h6>Main page</h6>
 
 <div style="display:flex;">
   
   <img src="imgs/exampleGIF/gifMainPorsche.gif" alt="" height="250px">
+  
+</div>
+
+<h6>Footer</h6>
+
+<div style="display:flex;">
+  
+  <img src="imgs/exampleGIF/footerPorsche.gif" alt="" height="250px">
   
 </div>
