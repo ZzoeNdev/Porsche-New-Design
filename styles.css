@@ -493,16 +493,13 @@ header {
 .infositem-charger,
 .infositem-cayenne,
 .infositem-new911 {
-    cursor: pointer;
-}
-
-.infositem-charger {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 13.8vw;
     min-width: 156px;
+    cursor: pointer;
 }
 
 .chargerBackground {
@@ -516,7 +513,9 @@ header {
     object-position: bottom;
 }
 
-.chargerOver {
+.chargerOver,
+.new911Over,
+.cayenneOver {
     z-index: 2;
     position: relative;
     width: 100%;
@@ -531,14 +530,6 @@ header {
     height: 20vh;
 }
 
-.infositem-new911 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 13.8vw;
-    min-width: 156px;
-}
 
 .new911Background {
     transition: 0.5s;
@@ -551,28 +542,10 @@ header {
     object-position: bottom;
 }
 
-.new911Over {
-    z-index: 2;
-    margin-top: -75%;
-    width: 100%;
-    min-width: 135px;
-    height: auto;
-    pointer-events: none;
-}
-
 .new911Background:hover {
     transition: 0.5s;
     behavior: smooth;
     height: 190px;
-}
-
-.infositem-cayenne {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 13.8vw;
-    min-width: 156px;
 }
 
 .cayenneBackground {
@@ -586,14 +559,6 @@ header {
     object-position: bottom;
 }
 
-.cayenneOver {
-    z-index: 2;
-    margin-top: -75%;
-    width: 100%;
-    height: auto;
-    pointer-events: none;
-}
-
 .cayenneBackground:hover {
     transition: 0.5s;
     behavior: smooth;
@@ -603,6 +568,7 @@ header {
 .direction-link {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 4%;
 }
@@ -944,7 +910,7 @@ header {
     justify-content: space-between;
 }
 
-.featuredNewsRSide{
+.featuredNewsRSide {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -977,7 +943,7 @@ footer {
     padding-bottom: 20px;
 }
 
-.interconnection-footer{
+.interconnection-footer {
     position: absolute;
     left: 0px;
     background-color: var(--main-color);
@@ -985,7 +951,7 @@ footer {
     height: 30vh;
 }
 
-.footer-container{
+.footer-container {
     background-color: var(--main-color);
     width: 98vw;
     height: auto;
@@ -993,36 +959,36 @@ footer {
     border-radius: 20px;
 }
 
-.footer-content{
+.footer-content {
     display: grid;
-    grid-template-areas: 
-    "contact topics"
-    "copyright regions"
+    grid-template-areas:
+        "contact topics"
+        "copyright regions"
     ;
     grid-template-columns: 85% auto;
 }
 
-.contactMethods{
+.contactMethods {
     grid-area: contact;
 }
 
-.contact-item{
+.contact-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--secundary-color);
 }
 
-.contact-item > h1{
+.contact-item>h1 {
     font-size: 1.7vw;
     font-weight: 500;
 }
 
-.contact-item > p{
+.contact-item>p {
     font-size: 0.85vw;
 }
 
-.contact-item > button{
+.contact-item>button {
     transition: 0.5s;
     width: 20%;
     height: 4.5vh;
@@ -1035,90 +1001,90 @@ footer {
     margin-top: 1%;
 }
 
-.contact-item > button:hover{
+.contact-item>button:hover {
     transition: 0.5s;
     background-color: var(--third-color);
 }
 
-.socialMidia{
+.socialMidia {
     margin-top: 4%;
     color: var(--secundary-color);
 }
 
-.socialMidia > h1{
+.socialMidia>h1 {
     font-size: 1.7vw;
     font-weight: 500;
 }
 
-.socialMidia > p {
+.socialMidia>p {
     font-size: 0.85vw;
 }
 
-.socialLogos{
+.socialLogos {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-top: 0.8%;
 }
 
-.socialLogos > img{
+.socialLogos>img {
     cursor: pointer;
 }
 
-.topics-container{
+.topics-container {
     grid-area: topics;
 }
 
-.topic{
+.topic {
     color: var(--secundary-color);
 }
 
-.topic > h1{
+.topic>h1 {
     font-size: 1.7vw;
     font-weight: 500;
 }
 
-.topics-items{
+.topics-items {
     transition: 0.5s;
     font-size: 0.85vw;
     color: rgb(82, 82, 82);
     cursor: pointer;
 }
 
-.topics-items:hover{
+.topics-items:hover {
     transition: 0.5s;
     color: var(--third-color);
 }
 
-.copyright{
+.copyright {
     grid-area: copyright;
     margin-top: 6%;
 }
 
-.copyright > p{
+.copyright>p {
     color: var(--secundary-color);
     font-size: 0.8vw;
     font-weight: 300;
     max-width: 1300px;
 }
 
-.region-footer{
+.region-footer {
     grid-area: regions;
     color: var(--secundary-color);
     margin-top: 25%;
 }
 
-.region-footer > h3{
+.region-footer>h3 {
     font-size: 1vw;
     font-weight: 500;
 }
 
-.region-footer > a{
+.region-footer>a {
     color: var(--secundary-color);
     font-size: 0.7vw;
 }
 
-.logo-footer{
+.logo-footer {
     width: 100%;
     height: auto;
     margin-top: 12%;
@@ -1316,5 +1282,251 @@ footer {
         top: 85%;
     }
 
-    .second-container {}
+    /* segunda seção */
+
+    .mainBanner{
+        height: 120px;
+        border-radius: 20px;
+    }
+
+    .mainBanner>p {
+    font-size: 2.5vh;
+    color: var(--secundary-color);
+    width: 250px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+    .infosMainBanner {
+        align-items: end;
+        align-self: start;
+        margin-left: 7.8%;
+        height: 200px;
+    }
+
+    .infositem-charger,
+    .infositem-cayenne,
+    .infositem-new911 {
+        min-width: 25vw;
+    }
+
+    .cayenneBackground:hover,
+    .chargerBackground:hover,
+    .new911Background:hover {
+        transition: 0.5s;
+        behavior: smooth;
+        height: 100%;
+    }
+
+    .chargerOver,
+    .new911Over,
+    .cayenneOver {
+        z-index: 2;
+        position: relative;
+        width: 100%;
+        min-width: 135px;
+        height: auto;
+        margin-top: -99px;
+        pointer-events: none;
+    }
+
+    .direction-link {
+        font-size: 14px;
+    }
+
+    .direction-link>img {
+        height: 25px;
+    }
+
+    .textLearnMore {
+        font-size: 28px;
+        color: var(--main-color);
+        font-weight: 400;
+        font-style: italic;
+        width: 70vw;
+        margin-right: 0;
+        padding: 60px;
+        text-align: center;
+    }
+
+    .optionInfo-item {
+        height: 20%;
+        width: 20%;
+    }
+
+    .sliderInfo-container {
+        width: 282vw;
+    }
+
+    .infoCar-item {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 2%;
+        width: 100%;
+    }
+
+    .infoCar-carFront {
+        margin-bottom: -57.3%;
+    }
+
+    .fixCarFront718 {
+        margin-bottom: -60.3%;
+    }
+
+    .infoCar-background {
+        z-index: 1;
+        width: 90%;
+        height: 12.5vh;
+        min-width: 300px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 15px;
+    }
+
+    .aboutInfoCar {
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .aboutInfoCar>img {
+        width: 15vw;
+        min-width: 50px;
+        height: auto;
+    }
+
+    .aboutInfoCar>p {
+        font-size: 12px;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    .aboutInfoCar>button {
+        width: 110px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .fuelInfo {
+        width: 15vw;
+    }
+
+    .textInfo-slider {
+        font-size: 12px;
+    }
+
+    .findYourPorsche {
+        margin-top: 25%;
+    }
+
+    .titleFindPorsche {
+        font-size: 23px;
+    }
+
+    .subtitleFindPorsche {
+        font-size: 12px;
+    }
+
+    .searchCity {
+        margin-top: 5%;
+    }
+
+    .searchCityButton {
+        left: 84.5%;
+    }
+
+    footer {
+        padding-bottom: 5px;
+    }
+
+    .interconnection-footer {
+        position: absolute;
+        left: 0px;
+        background-color: var(--main-color);
+        width: 1.2%;
+        height: 30vh;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-areas:
+            "contact contact"
+            "topics topics"
+            "copyright regions"
+        ;
+        grid-template-columns: 70% auto;
+    }
+
+    .contact-item>h1 {
+        font-size: 20px;
+    }
+
+    .contact-item>p {
+        font-size: 10px;
+    }
+
+    .contact-item>button {
+        width: 40%;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .socialMidia {
+        margin-top: 8%;
+    }
+
+    .socialMidia>h1 {
+        font-size: 20px;
+        max-width: 250px;
+    }
+
+    .socialMidia>p {
+        font-size: 10px;
+    }
+
+    .socialLogos {
+        gap: 8px;
+        margin-top: 2%;
+    }
+
+    .socialLogos>img {
+        height: 20px;
+        width: auto;
+    }
+
+    .topic {
+        margin-top: 8%;
+    }
+
+    .topic>h1 {
+        font-size: 20px;
+    }
+
+    .topics-items {
+        font-size: 10px;
+    }
+
+    .copyright {
+        margin-top: 8%;
+    }
+
+    .copyright>p {
+        font-size: 5px;
+        font-weight: 300;
+        max-width: 200px;
+    }
+
+    .region-footer {
+        margin-top: 10%;
+    }
+
+    .region-footer>h3 {
+        font-size: 12px;
+    }
+
+    .region-footer>a {
+        font-size: 9px;
+    }
+
 }
