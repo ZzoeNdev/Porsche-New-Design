@@ -90,7 +90,7 @@ console.log(CarsItemsLength);
 console.log(selectedCar);
 
 
-// Espera um clique no no botão de menos para executar a função
+// Aqui tem a função q será executada
 
 function flowSlider(a){
 
@@ -231,4 +231,5 @@ sliderInfoL.addEventListener('click', function(){
 sliderInfoR.addEventListener('click', function(){
     flowSliderInfo(1);
 });
+
 
