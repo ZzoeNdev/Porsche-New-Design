@@ -166,10 +166,12 @@ function flowSlider(a){
 // Execução das funçoes
 
 minusButton.addEventListener("click", function(){
+    // Aqui falo pra executar a função q eu criei com o valo -1 que será substituido lá no selectedCar
     flowSlider(-1);
 });
 
 plusButton.addEventListener("click", function(){
+    // Aqui falo pra executar a função q eu criei com o valo 1 que será substituido lá no selectedCar
     flowSlider(1);
 });
 
@@ -179,6 +181,7 @@ plusButton.addEventListener("click", function(){
 // Slider de informações do carro
 
 // Mesma lógica do outro slider
+// Aqui é o q aparece no main page, ele executa dois sliders de uma vez, os da logo em cima e das informações embaixo
 
 const mainSection = document.getElementById('primary-section');
 const sliderInfoL = document.getElementById('sliderInfoL');
@@ -231,5 +234,6 @@ sliderInfoL.addEventListener('click', function(){
 sliderInfoR.addEventListener('click', function(){
     flowSliderInfo(1);
 });
+
 
 
