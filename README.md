@@ -24,6 +24,7 @@
 <div style="display:flex;">
   
   <img src="imgs/exampleGIF/gifMainPorsche.gif" alt="" height="250px">
+  <img src="imgs/exampleGIF/gifMainSmartphone.gif" alt="" height="250px">
   
 </div>
 
@@ -32,5 +33,6 @@
 <div style="display:flex;">
   
   <img src="imgs/exampleGIF/footerPorsche.gif" alt="" height="250px">
+  <img src="imgs/exampleGIF/gifFooterSmartphone.gif" alt="" height="250px">
   
 </div>
