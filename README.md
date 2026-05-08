@@ -1,21 +1,21 @@
 
 <div align="center" style="display: flex;">
-  
-<h1><b>NOT AN OFFICIAL PORSCHE WEBSITE</b></h1>
-<h5>This website is created for <b>personal use</b> and <b>demonstrate the new desing</b></h5>
-<h5>To use or view, go to: <a href="https://zzoendev.github.io/Porsche-New-Design/">https://zzoendev.github.io/Porsche-New-Design</a></h5>
 
-</div>
-
-<h1 align="center">Languages:</h1>
-<div align="center" style="display:flex;">
+<img src="imgs/exampleGIF/thumb.png"/>
+<div align="start" style="display:flex;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" height="40px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" height="40px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" height="40px"/>
 </div>
+  
+<h1><b>SITE NÃO OFICIAL PORSCHE</b></h1>
+<h5>Esse site foi criado para <b>uso pessoal</b> e <b>mostrar o novo design desenvolvido</b></h5>
+<h5>Para ver, vá: <a href="https://zzoendev.github.io/Porsche-New-Design/">https://zzoendev.github.io/Porsche-New-Design</a></h5>
+
+</div>
 
 <h1 align="center">Overview:</h1>
-<h6 align="center">Home and Menu pages</h6>
+<h6 align="center">Home e Menu</h6>
 
 <div align="center" style="display:flex;">
   
@@ -42,4 +42,4 @@
   
 </div>
 
-<h4 align="center"> Developed by ZzoeNdev</h4>
+<h4 align="center"> Desenvolvido por ZzoeNdev</h4>
