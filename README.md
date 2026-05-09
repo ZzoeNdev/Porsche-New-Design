@@ -2,7 +2,7 @@
 <div align="center" style="display: flex;">
 
 <img src="imgs/exampleGIF/banner.png"/>
-<div align="start" style="display:flex;">
+<div align="center" style="display:flex;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" height="40px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" height="40px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" height="40px"/>
